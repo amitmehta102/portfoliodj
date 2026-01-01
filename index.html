@@ -40,9 +40,7 @@ nav{
     justify-content:space-between;
     flex-wrap:wrap;
 }
-.logo{
-    width:140px;
-}
+.logo{width:140px;}
 nav ul li{
     display:inline-block;
     margin:10px 20px;
@@ -67,18 +65,17 @@ nav ul li a:hover::after{
     width:100%;
 }
 
-/* HEADER TEXT */
+/* HEADER TEXT (MOVED RIGHT) */
 .header-text{
     margin-top:20%;
+    margin-left:45%;
     font-size:30px;
 }
 .header-text h1{
     font-size:60px;
     margin-top:20px;
 }
-.header-text h1 span{
-    color:#f97316;
-}
+.header-text h1 span{color:#f97316;}
 
 /* ABOUT */
 #about{
@@ -90,15 +87,14 @@ nav ul li a:hover::after{
     justify-content:space-between;
     flex-wrap:wrap;
 }
-.about-col-1{
-    flex-basis:35%;
-}
+.about-col-1{flex-basis:35%;}
 .about-col-1 img{
     width:100%;
     border-radius:15px;
 }
 .about-col-2{
     flex-basis:60%;
+    margin-left:5%;
 }
 .sub-title{
     font-size:60px;
@@ -127,15 +123,9 @@ nav ul li a:hover::after{
     bottom:-8px;
     transition:.5s;
 }
-.tab-links.active-link::after{
-    width:50%;
-}
-.tab-contents{
-    display:none;
-}
-.tab-contents.active-tab{
-    display:block;
-}
+.tab-links.active-link::after{width:50%;}
+.tab-contents{display:none;}
+.tab-contents.active-tab{display:block;}
 .tab-contents ul li{
     list-style:none;
     margin:10px 0;
@@ -146,9 +136,7 @@ nav ul li a:hover::after{
 }
 
 /* SERVICES */
-#services{
-    padding:30px 0;
-}
+#services{padding:30px 0;}
 .services-list{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -169,19 +157,13 @@ nav ul li a:hover::after{
     font-size:50px;
     margin-bottom:30px;
 }
-.services-list div h2{
-    font-size:30px;
-    margin-bottom:15px;
-}
 
-/* PORTFOLIO */
-#portfolio{
-    padding:50px 0;
-}
+/* PORTFOLIO (BIGGER BLOCKS) */
+#portfolio{padding:50px 0;}
 .work-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:50px;
 }
 .work{
     border-radius:10px;
@@ -190,6 +172,8 @@ nav ul li a:hover::after{
 }
 .work img{
     width:100%;
+    height:320px;
+    object-fit:cover;
     transition:.5s;
 }
 .layer{
@@ -206,12 +190,8 @@ nav ul li a:hover::after{
     text-align:center;
     padding:20px;
 }
-.work:hover img{
-    transform:scale(1.1);
-}
-.work:hover .layer{
-    height:100%;
-}
+.work:hover img{transform:scale(1.1);}
+.work:hover .layer{height:100%;}
 
 /* BUTTON */
 .btn{
@@ -225,9 +205,7 @@ nav ul li a:hover::after{
     text-decoration:none;
     transition:.5s;
 }
-.btn:hover{
-    background:#ff004f;
-}
+.btn:hover{background:#ff004f;}
 .btn.btn2{
     display:inline-block;
     background:#ff004f;
@@ -265,9 +243,7 @@ form input,form textarea{
     padding:25px;
     margin-top:20px;
 }
-#msg{
-    color:#61b752;
-}
+#msg{color:#61b752;}
 </style>
 </head>
 
@@ -293,7 +269,7 @@ form input,form textarea{
 
 <div class="header-text">
 <p>Software Engineer</p>
-<h1>Hi, I'm <span>Dharmendra</span><br>Kumar From India</h1>
+<h1>Hi, I'm <span>Dharmendra</span><br>Kumar</h1>
 </div>
 </div>
 </div>
@@ -331,7 +307,6 @@ responsive web interfaces and continuously learning new technologies.
 <ul>
 <li><span>2027-Current</span><br>UI/UX Design Training</li>
 <li><span>2025-2026</span><br>Team Lead</li>
-<li><span>2024-2025</span><br>UI Executive</li>
 </ul>
 </div>
 
@@ -351,21 +326,9 @@ responsive web interfaces and continuously learning new technologies.
 <div class="container">
 <h1 class="sub-title">My Services</h1>
 <div class="services-list">
-<div>
-<i class="fas fa-code"></i>
-<h2>Web Design</h2>
-<p>Modern responsive websites</p>
-</div>
-<div>
-<i class="fas fa-crop-alt"></i>
-<h2>UI/UX Design</h2>
-<p>Clean user-focused design</p>
-</div>
-<div>
-<i class="fab fa-app-store"></i>
-<h2>App Design</h2>
-<p>Basic mobile app UI</p>
-</div>
+<div><i class="fas fa-code"></i><h2>Web Design</h2><p>Modern responsive websites</p></div>
+<div><i class="fas fa-crop-alt"></i><h2>UI/UX Design</h2><p>Clean user-focused design</p></div>
+<div><i class="fab fa-app-store"></i><h2>App Design</h2><p>Mobile UI design</p></div>
 </div>
 </div>
 </div>
@@ -375,27 +338,9 @@ responsive web interfaces and continuously learning new technologies.
 <div class="container">
 <h1 class="sub-title">My Work</h1>
 <div class="work-list">
-<div class="work">
-<img src="work-1.png">
-<div class="layer">
-<h3>Social Media App</h3>
-<p>Connects people worldwide</p>
-</div>
-</div>
-<div class="work">
-<img src="work-2.png">
-<div class="layer">
-<h3>Music App</h3>
-<p>Stream and enjoy music</p>
-</div>
-</div>
-<div class="work">
-<img src="work-3.png">
-<div class="layer">
-<h3>Shopping App</h3>
-<p>Online shopping experience</p>
-</div>
-</div>
+<div class="work"><img src="work-1.png"><div class="layer"><h3>Social Media App</h3></div></div>
+<div class="work"><img src="work-2.png"><div class="layer"><h3>Music App</h3></div></div>
+<div class="work"><img src="work-3.png"><div class="layer"><h3>Shopping App</h3></div></div>
 </div>
 <a href="#" class="btn">See more</a>
 </div>
@@ -409,19 +354,27 @@ responsive web interfaces and continuously learning new technologies.
 <h1 class="sub-title">Contact Me</h1>
 <p><i class="fas fa-paper-plane"></i> mehtadharmendrakumar23@gmail.com</p>
 <p><i class="fas fa-phone-square-alt"></i> 9508937434</p>
-
 <div class="social-icons">
 <a href="#"><i class="fab fa-facebook"></i></a>
 <a href="#"><i class="fab fa-instagram"></i></a>
 <a href="#"><i class="fab fa-linkedin"></i></a>
 </div>
+<a href="Dharmendra_Kumar_Mehta_CV.pdf" download class="btn btn2">Download Resume</a>
+</div>
+</div>
+</div>
+</div>
 
-<a href="Dharmendra_Kumar_Mehta_CV.pdf" download class="btn btn2">
-Download Resume
-</a>
-</div>
-</div>
-</div>
+<!-- FINAL FORM -->
+<div style="padding:80px 10%;">
+<h1 class="sub-title">Send Me a Message</h1>
+<form name="submit-to-google-sheet">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+<button type="submit" class="btn btn2">Submit</button>
+</form>
+<span id="msg"></span>
 </div>
 
 <div class="copyright">
@@ -430,4 +383,17 @@ Download Resume
 
 <script>
 var tablinks=document.getElementsByClassName("tab-links");
-var tabcontents=document.getElement
+var tabcontents=document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+for(tablink of tablinks){tablink.classList.remove("active-link");}
+for(tabcontent of tabcontents){tabcontent.classList.remove("active-tab");}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+}
+var sidemeu=document.getElementById("sidemenu");
+function openmenu(){sidemeu.style.right="0";}
+function closemenu(){sidemeu.style.right="-200px";}
+</script>
+
+</body>
+</html>
