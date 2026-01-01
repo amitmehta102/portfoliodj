@@ -3,253 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal Portfolio</title>
+<title>Dharmendra Kumar | Portfolio</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 html{scroll-behavior:smooth;}
 body{
-    background:#080808;
-    color:#fff;
+  background:#080808;
+  color:#fff;
 }
 
 /* ---------- NAVBAR ---------- */
 nav{
-    display:flex;
-    align-items:center;
-    padding:10px 10%;
+  display:flex;
+  padding:15px 10%;
 }
-.logo{width:140px;}
 nav ul{
-    margin-left:auto;   /* MENU TO RIGHT */
+  margin-left:auto;
 }
 nav ul li{
-    display:inline-block;
-    margin:10px 20px;
+  display:inline-block;
+  margin:10px 20px;
 }
 nav ul li a{
-    color:#fff;
-    text-decoration:none;
-    font-size:18px;
-    position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  position:relative;
 }
 nav ul li a::after{
-    content:'';
-    width:0;
-    height:3px;
-    background:#ff004f;
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    transition:.5s;
+  content:'';
+  width:0;
+  height:3px;
+  background:#ff004f;
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  transition:.4s;
 }
 nav ul li a:hover::after{
-    width:100%;
+  width:100%;
 }
 
 /* ---------- HEADER ---------- */
 #header{
-    height:100vh;
+  height:90vh;
 }
 .container{
-    padding:10px 10%;
+  padding:10px 10%;
 }
 #hey{
-    width:30%;
-    height:65vh;
-    float:right;
-    object-fit:cover;
+  width:30%;
+  height:60vh;
+  float:right;
+  object-fit:cover;
 }
 .header-text{
-    margin-top:20%;
-    font-size:30px;
+  margin-top:18%;
 }
 .header-text h1{
-    font-size:60px;
-    margin-top:20px;
+  font-size:60px;
 }
 .header-text h1 span{
-    color:#f97316;
+  color:#ff004f;
+}
+.header-text p{
+  color:#ababab;
+  margin-bottom:10px;
+}
+
+/* ---------- COMMON ---------- */
+.sub-title{
+  font-size:60px;
+  margin-bottom:30px;
+}
+section{
+  padding:50px 0;
 }
 
 /* ---------- ABOUT ---------- */
 #about{
-    padding:80px 0;
-    color:#ababab;
-}
-.row{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
-.about-col-1{
-    flex-basis:35%;
-}
-.about-col-1 img{
-    width:100%;
-    border-radius:15px;
-}
-.about-col-2{
-    flex-basis:60%;
-}
-.sub-title{
-    font-size:60px;
-    font-weight:600;
-    color:#fff;
-}
-.tab-titles{
-    display:flex;
-    margin:20px 0 40px;
-}
-.tab-links{
-    margin-right:50px;
-    font-size:18px;
-    cursor:pointer;
-    position:relative;
-}
-.tab-links::after{
-    content:'';
-    width:0;
-    height:3px;
-    background:#ff004f;
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    transition:.5s;
-}
-.tab-links.active-link::after{
-    width:50%;
-}
-.tab-contents{display:none;}
-.tab-contents.active-tab{display:block;}
-.tab-contents ul li{
-    list-style:none;
-    margin:10px 0;
-}
-.tab-contents ul li span{
-    color:#b54769;
+  color:#ababab;
 }
 
-/* ---------- SERVICES ---------- */
-#services{padding:30px 0;}
-.services-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
-    margin-top:50px;
-}
-.services-list div{
-    background:#262626;
-    padding:40px;
-    border-radius:10px;
-    transition:.5s;
-}
-.services-list div:hover{
-    background:#ff004f;
-    transform:translateY(-10px);
-}
-.services-list i{
-    font-size:50px;
-    margin-bottom:30px;
+/* ---------- SKILLS ---------- */
+.skills-wrapper{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:50px;
 }
 
-/* ---------- PORTFOLIO ---------- */
-#portfolio{padding:50px 0;}
+.skill-block{
+  background:#262626;
+  padding:35px;
+  border-radius:12px;
+}
+.skill-block h2{
+  margin-bottom:25px;
+  border-bottom:2px solid #ff004f;
+  display:inline-block;
+  padding-bottom:5px;
+}
+
+.skill{
+  margin-bottom:22px;
+}
+.skill-header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:6px;
+}
+.skill-bar{
+  background:#1a1a1a;
+  border-radius:6px;
+  overflow:hidden;
+}
+.skill-bar span{
+  display:block;
+  height:14px;
+  background:#ff004f;
+}
+
+/* ---------- PROJECTS ---------- */
 .work-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
 }
 .work{
-    position:relative;
-    overflow:hidden;
-    border-radius:10px;
+  background:#262626;
+  padding:30px;
+  border-radius:10px;
+  transition:.4s;
 }
-.work img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
-    transition:.5s;
+.work:hover{
+  background:#ff004f;
+  transform:translateY(-8px);
 }
-.layer{
-    width:100%;
-    height:0;
-    background:linear-gradient(rgba(0,0,0,.6),#ff004f);
-    position:absolute;
-    bottom:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    transition:.5s;
-}
-.work:hover img{transform:scale(1.1);}
-.work:hover .layer{height:100%;}
 
-/* ---------- BUTTON ---------- */
-.btn{
-    display:block;
-    margin:50px auto;
-    padding:14px 50px;
-    border:1px solid #ff004f;
-    color:#fff;
-    text-decoration:none;
-    border-radius:6px;
-    transition:.5s;
+/* ---------- CERTIFICATIONS ---------- */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
-.btn:hover{background:#ff004f;}
-.btn.btn2{
-    display:inline-block;
-    background:#ff004f;
+.cert{
+  background:#262626;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  transition:.4s;
+}
+.cert:hover{
+  background:#ff004f;
+  transform:translateY(-8px);
 }
 
 /* ---------- CONTACT ---------- */
+.row{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
 .contact-left{
-    flex-basis:35%;
+  flex:1;
 }
 .contact-right{
-    flex-basis:60%;
+  flex:1;
+}
+.contact-left p{
+  margin:20px 0;
 }
 .contact-left p i{
-    color:#ff004f;
-    margin-right:15px;
+  color:#ff004f;
+  margin-right:12px;
+}
+.social-icons{
+  margin:25px 0;
 }
 .social-icons a{
-    font-size:30px;
-    margin-right:15px;
-    color:#ababab;
-    transition:.5s;
+  font-size:30px;
+  margin-right:15px;
+  color:#ababab;
+  transition:.4s;
 }
 .social-icons a:hover{
-    color:#ff004f;
-    transform:translateY(-5px);
+  color:#ff004f;
+  transform:translateY(-5px);
 }
 form input, form textarea{
-    width:100%;
-    background:#262626;
-    border:0;
-    padding:15px;
-    margin:15px 0;
-    color:#fff;
-    border-radius:6px;
+  width:100%;
+  background:#262626;
+  border:0;
+  padding:15px;
+  margin:15px 0;
+  color:#fff;
+  border-radius:6px;
+}
+
+/* ---------- BUTTON ---------- */
+.btn{
+  display:inline-block;
+  padding:14px 45px;
+  border:1px solid #ff004f;
+  color:#fff;
+  border-radius:6px;
+  transition:.4s;
+}
+.btn:hover{
+  background:#ff004f;
+}
+.btn.btn2{
+  background:#ff004f;
 }
 
 /* ---------- FOOTER ---------- */
 .copyright{
-    text-align:center;
-    padding:25px;
-    background:#262626;
-    margin-top:40px;
+  text-align:center;
+  padding:25px;
+  background:#262626;
+  margin-top:40px;
 }
-#msg{color:#61b752;}
 </style>
 </head>
 
@@ -258,12 +239,12 @@ form input, form textarea{
 <!-- HEADER -->
 <div id="header">
 <nav>
-<img src="images.png" class="logo">
 <ul>
 <li><a href="#header">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -271,76 +252,83 @@ form input, form textarea{
 <div class="container">
 <img src="go.jpeg" id="hey">
 <div class="header-text">
-<p>Software Engineer</p>
+<p>Frontend Developer | Web Enthusiast</p>
 <h1>Hi, I'm <span>Dharmendra</span><br>Kumar</h1>
 </div>
 </div>
 </div>
 
 <!-- ABOUT -->
-<div id="about">
+<section id="about">
 <div class="container">
-<div class="row">
-<div class="about-col-1">
-<img src="rock.jpeg">
-</div>
-<div class="about-col-2">
 <h1 class="sub-title">About Me</h1>
 <p>
 Computer Science Engineering student passionate about frontend development,
-clean UI design, and modern web technologies.
+modern UI design, and building responsive web applications. Actively working
+on academic and personal projects to strengthen real-world skills.
 </p>
+</div>
+</section>
 
-<div class="tab-titles">
-<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-<p class="tab-links" onclick="opentab('education')">Education</p>
-</div>
-
-<div class="tab-contents active-tab" id="skills">
-<ul>
-<li><span>Web</span><br>HTML, CSS, JavaScript</li>
-<li><span>UI/UX</span><br>Responsive Design</li>
-</ul>
-</div>
-
-<div class="tab-contents" id="education">
-<ul>
-<li><span>B.Tech</span><br>Computer Science Engineering</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- SERVICES -->
-<div id="services">
+<!-- SKILLS -->
+<section id="skills">
 <div class="container">
-<h1 class="sub-title">My Services</h1>
-<div class="services-list">
-<div><i class="fas fa-code"></i><h2>Web Design</h2></div>
-<div><i class="fas fa-crop-alt"></i><h2>UI/UX Design</h2></div>
-<div><i class="fab fa-app-store"></i><h2>App Design</h2></div>
-</div>
-</div>
+<h1 class="sub-title">My Skills</h1>
+
+<div class="skills-wrapper">
+
+<div class="skill-block">
+<h2>Frontend</h2>
+<div class="skill"><div class="skill-header"><span>HTML</span><span>90%</span></div><div class="skill-bar"><span style="width:90%"></span></div></div>
+<div class="skill"><div class="skill-header"><span>CSS</span><span>85%</span></div><div class="skill-bar"><span style="width:85%"></span></div></div>
+<div class="skill"><div class="skill-header"><span>JavaScript</span><span>80%</span></div><div class="skill-bar"><span style="width:80%"></span></div></div>
+<div class="skill"><div class="skill-header"><span>React.js</span><span>70%</span></div><div class="skill-bar"><span style="width:70%"></span></div></div>
 </div>
 
-<!-- PORTFOLIO -->
-<div id="portfolio">
+<div class="skill-block">
+<h2>Tools & Technologies</h2>
+<div class="skill"><div class="skill-header"><span>MySQL</span><span>65%</span></div><div class="skill-bar"><span style="width:65%"></span></div></div>
+<div class="skill"><div class="skill-header"><span>GitHub</span><span>85%</span></div><div class="skill-bar"><span style="width:85%"></span></div></div>
+<div class="skill"><div class="skill-header"><span>VS Code</span><span>90%</span></div><div class="skill-bar"><span style="width:90%"></span></div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
 <div class="container">
-<h1 class="sub-title">My Work</h1>
+<h1 class="sub-title">My Projects</h1>
 <div class="work-list">
-<div class="work"><img src="work-1.png"><div class="layer"><h3>Social App</h3></div></div>
-<div class="work"><img src="work-2.png"><div class="layer"><h3>Music App</h3></div></div>
-<div class="work"><img src="work-3.png"><div class="layer"><h3>Shopping App</h3></div></div>
+<div class="work"><h3>Portfolio Website</h3><p>Responsive personal portfolio.</p></div>
+<div class="work"><h3>To-Do App</h3><p>Task manager using JavaScript.</p></div>
+<div class="work"><h3>Student Management System</h3><p>CRUD system with MySQL.</p></div>
+<div class="work"><h3>Job Portal</h3><p>Job posting and application platform.</p></div>
 </div>
 </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<div class="container">
+<h1 class="sub-title">Certifications</h1>
+<div class="cert-grid">
+<div class="cert">Google Cloud Career Launchpad</div>
+<div class="cert">Oracle Data Science</div>
+<div class="cert">IBM Cloud Computing</div>
+<div class="cert">TATA Generative AI</div>
+<div class="cert">Infosys Python</div>
+<div class="cert">Red Team Cybersecurity Educator</div>
 </div>
+</div>
+</section>
 
 <!-- CONTACT -->
-<div id="contact">
+<section id="contact">
 <div class="container">
 <div class="row">
+
 <div class="contact-left">
 <h1 class="sub-title">Contact Me</h1>
 <p><i class="fas fa-paper-plane"></i> mehtadharmendrakumar23@gmail.com</p>
@@ -354,32 +342,21 @@ clean UI design, and modern web technologies.
 </div>
 
 <div class="contact-right">
-<form name="submit-to-google-sheet">
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="email" name="Email" placeholder="Your Email" required>
-<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="6" placeholder="Your Message"></textarea>
 <button type="submit" class="btn btn2">Submit</button>
 </form>
-<span id="msg"></span>
+</div>
+
 </div>
 </div>
-</div>
-</div>
+</section>
 
 <div class="copyright">
 <p>© Dharmendra Kumar</p>
 </div>
-
-<script>
-function opentab(tabname){
-let tabs=document.getElementsByClassName("tab-links");
-let contents=document.getElementsByClassName("tab-contents");
-for(t of tabs){t.classList.remove("active-link");}
-for(c of contents){c.classList.remove("active-tab");}
-event.currentTarget.classList.add("active-link");
-document.getElementById(tabname).classList.add("active-tab");
-}
-</script>
 
 </body>
 </html>
