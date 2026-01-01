@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Personal Portfolio Website</title>
+<title>Personal Portfolio</title>
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-crossorigin="anonymous">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{
     margin:0;
     padding:0;
-    font-family:'Poppins',sans-serif;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 html{scroll-behavior:smooth;}
 body{
@@ -22,25 +21,16 @@ body{
     color:#fff;
 }
 
-/* HEADER IMAGE */
-#hey{
-    width:30%;
-    height:65vh;
-    float:right;
-    object-fit:cover;
-}
-
-.container{
-    padding:10px 10%;
-}
-
-/* NAV */
+/* ---------- NAVBAR ---------- */
 nav{
     display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+    align-items:center;
+    padding:10px 10%;
 }
 .logo{width:140px;}
+nav ul{
+    margin-left:auto;   /* MENU TO RIGHT */
+}
 nav ul li{
     display:inline-block;
     margin:10px 20px;
@@ -65,19 +55,32 @@ nav ul li a:hover::after{
     width:100%;
 }
 
-/* HEADER TEXT (MOVED RIGHT) */
+/* ---------- HEADER ---------- */
+#header{
+    height:100vh;
+}
+.container{
+    padding:10px 10%;
+}
+#hey{
+    width:30%;
+    height:65vh;
+    float:right;
+    object-fit:cover;
+}
 .header-text{
     margin-top:20%;
-    margin-left:45%;
     font-size:30px;
 }
 .header-text h1{
     font-size:60px;
     margin-top:20px;
 }
-.header-text h1 span{color:#f97316;}
+.header-text h1 span{
+    color:#f97316;
+}
 
-/* ABOUT */
+/* ---------- ABOUT ---------- */
 #about{
     padding:80px 0;
     color:#ababab;
@@ -87,22 +90,21 @@ nav ul li a:hover::after{
     justify-content:space-between;
     flex-wrap:wrap;
 }
-.about-col-1{flex-basis:35%;}
+.about-col-1{
+    flex-basis:35%;
+}
 .about-col-1 img{
     width:100%;
     border-radius:15px;
 }
 .about-col-2{
     flex-basis:60%;
-    margin-left:5%;
 }
 .sub-title{
     font-size:60px;
     font-weight:600;
     color:#fff;
 }
-
-/* TABS */
 .tab-titles{
     display:flex;
     margin:20px 0 40px;
@@ -123,7 +125,9 @@ nav ul li a:hover::after{
     bottom:-8px;
     transition:.5s;
 }
-.tab-links.active-link::after{width:50%;}
+.tab-links.active-link::after{
+    width:50%;
+}
 .tab-contents{display:none;}
 .tab-contents.active-tab{display:block;}
 .tab-contents ul li{
@@ -132,10 +136,9 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     color:#b54769;
-    font-size:14px;
 }
 
-/* SERVICES */
+/* ---------- SERVICES ---------- */
 #services{padding:30px 0;}
 .services-list{
     display:grid;
@@ -153,12 +156,12 @@ nav ul li a:hover::after{
     background:#ff004f;
     transform:translateY(-10px);
 }
-.services-list div i{
+.services-list i{
     font-size:50px;
     margin-bottom:30px;
 }
 
-/* PORTFOLIO (BIGGER BLOCKS) */
+/* ---------- PORTFOLIO ---------- */
 #portfolio{padding:50px 0;}
 .work-list{
     display:grid;
@@ -166,9 +169,9 @@ nav ul li a:hover::after{
     gap:50px;
 }
 .work{
-    border-radius:10px;
     position:relative;
     overflow:hidden;
+    border-radius:10px;
 }
 .work img{
     width:100%;
@@ -179,7 +182,7 @@ nav ul li a:hover::after{
 .layer{
     width:100%;
     height:0;
-    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    background:linear-gradient(rgba(0,0,0,.6),#ff004f);
     position:absolute;
     bottom:0;
     display:flex;
@@ -187,22 +190,19 @@ nav ul li a:hover::after{
     justify-content:center;
     flex-direction:column;
     transition:.5s;
-    text-align:center;
-    padding:20px;
 }
 .work:hover img{transform:scale(1.1);}
 .work:hover .layer{height:100%;}
 
-/* BUTTON */
+/* ---------- BUTTON ---------- */
 .btn{
     display:block;
     margin:50px auto;
-    width:fit-content;
-    border:1px solid #ff004f;
     padding:14px 50px;
-    border-radius:6px;
+    border:1px solid #ff004f;
     color:#fff;
     text-decoration:none;
+    border-radius:6px;
     transition:.5s;
 }
 .btn:hover{background:#ff004f;}
@@ -211,7 +211,13 @@ nav ul li a:hover::after{
     background:#ff004f;
 }
 
-/* CONTACT */
+/* ---------- CONTACT ---------- */
+.contact-left{
+    flex-basis:35%;
+}
+.contact-right{
+    flex-basis:60%;
+}
 .contact-left p i{
     color:#ff004f;
     margin-right:15px;
@@ -226,7 +232,7 @@ nav ul li a:hover::after{
     color:#ff004f;
     transform:translateY(-5px);
 }
-form input,form textarea{
+form input, form textarea{
     width:100%;
     background:#262626;
     border:0;
@@ -236,12 +242,12 @@ form input,form textarea{
     border-radius:6px;
 }
 
-/* FOOTER */
+/* ---------- FOOTER ---------- */
 .copyright{
-    background:#262626;
     text-align:center;
     padding:25px;
-    margin-top:20px;
+    background:#262626;
+    margin-top:40px;
 }
 #msg{color:#61b752;}
 </style>
@@ -251,22 +257,19 @@ form input,form textarea{
 
 <!-- HEADER -->
 <div id="header">
-<div class="container">
 <nav>
 <img src="images.png" class="logo">
-<ul id="sidemenu">
+<ul>
 <li><a href="#header">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#contact">Contact</a></li>
-<i class="fas fa-times" onclick="closemenu()"></i>
 </ul>
-<i class="fas fa-bars" onclick="openmenu()"></i>
 </nav>
 
+<div class="container">
 <img src="go.jpeg" id="hey">
-
 <div class="header-text">
 <p>Software Engineer</p>
 <h1>Hi, I'm <span>Dharmendra</span><br>Kumar</h1>
@@ -284,29 +287,19 @@ form input,form textarea{
 <div class="about-col-2">
 <h1 class="sub-title">About Me</h1>
 <p>
-Computer Science Engineering student frontend developer skilled in
-HTML, CSS, JavaScript, and React. Passionate about building clean,
-responsive web interfaces and continuously learning new technologies.
+Computer Science Engineering student passionate about frontend development,
+clean UI design, and modern web technologies.
 </p>
 
 <div class="tab-titles">
 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-<p class="tab-links" onclick="opentab('experience')">Experience</p>
 <p class="tab-links" onclick="opentab('education')">Education</p>
 </div>
 
 <div class="tab-contents active-tab" id="skills">
 <ul>
-<li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-<li><span>Web Development</span><br>Web app Development</li>
-<li><span>App Development</span><br>Android/iOS apps</li>
-</ul>
-</div>
-
-<div class="tab-contents" id="experience">
-<ul>
-<li><span>2027-Current</span><br>UI/UX Design Training</li>
-<li><span>2025-2026</span><br>Team Lead</li>
+<li><span>Web</span><br>HTML, CSS, JavaScript</li>
+<li><span>UI/UX</span><br>Responsive Design</li>
 </ul>
 </div>
 
@@ -315,7 +308,6 @@ responsive web interfaces and continuously learning new technologies.
 <li><span>B.Tech</span><br>Computer Science Engineering</li>
 </ul>
 </div>
-
 </div>
 </div>
 </div>
@@ -326,9 +318,9 @@ responsive web interfaces and continuously learning new technologies.
 <div class="container">
 <h1 class="sub-title">My Services</h1>
 <div class="services-list">
-<div><i class="fas fa-code"></i><h2>Web Design</h2><p>Modern responsive websites</p></div>
-<div><i class="fas fa-crop-alt"></i><h2>UI/UX Design</h2><p>Clean user-focused design</p></div>
-<div><i class="fab fa-app-store"></i><h2>App Design</h2><p>Mobile UI design</p></div>
+<div><i class="fas fa-code"></i><h2>Web Design</h2></div>
+<div><i class="fas fa-crop-alt"></i><h2>UI/UX Design</h2></div>
+<div><i class="fab fa-app-store"></i><h2>App Design</h2></div>
 </div>
 </div>
 </div>
@@ -338,11 +330,10 @@ responsive web interfaces and continuously learning new technologies.
 <div class="container">
 <h1 class="sub-title">My Work</h1>
 <div class="work-list">
-<div class="work"><img src="work-1.png"><div class="layer"><h3>Social Media App</h3></div></div>
+<div class="work"><img src="work-1.png"><div class="layer"><h3>Social App</h3></div></div>
 <div class="work"><img src="work-2.png"><div class="layer"><h3>Music App</h3></div></div>
 <div class="work"><img src="work-3.png"><div class="layer"><h3>Shopping App</h3></div></div>
 </div>
-<a href="#" class="btn">See more</a>
 </div>
 </div>
 
@@ -353,21 +344,16 @@ responsive web interfaces and continuously learning new technologies.
 <div class="contact-left">
 <h1 class="sub-title">Contact Me</h1>
 <p><i class="fas fa-paper-plane"></i> mehtadharmendrakumar23@gmail.com</p>
-<p><i class="fas fa-phone-square-alt"></i> 9508937434</p>
+<p><i class="fas fa-phone"></i> 9508937434</p>
 <div class="social-icons">
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
 <a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
 </div>
-<a href="Dharmendra_Kumar_Mehta_CV.pdf" download class="btn btn2">Download Resume</a>
-</div>
-</div>
-</div>
+<a href="Dharmendra_Kumar_Mehta_CV.pdf" class="btn btn2">Download Resume</a>
 </div>
 
-<!-- FINAL FORM -->
-<div style="padding:80px 10%;">
-<h1 class="sub-title">Send Me a Message</h1>
+<div class="contact-right">
 <form name="submit-to-google-sheet">
 <input type="text" name="Name" placeholder="Your Name" required>
 <input type="email" name="Email" placeholder="Your Email" required>
@@ -376,23 +362,23 @@ responsive web interfaces and continuously learning new technologies.
 </form>
 <span id="msg"></span>
 </div>
+</div>
+</div>
+</div>
 
 <div class="copyright">
 <p>© Dharmendra Kumar</p>
 </div>
 
 <script>
-var tablinks=document.getElementsByClassName("tab-links");
-var tabcontents=document.getElementsByClassName("tab-contents");
 function opentab(tabname){
-for(tablink of tablinks){tablink.classList.remove("active-link");}
-for(tabcontent of tabcontents){tabcontent.classList.remove("active-tab");}
+let tabs=document.getElementsByClassName("tab-links");
+let contents=document.getElementsByClassName("tab-contents");
+for(t of tabs){t.classList.remove("active-link");}
+for(c of contents){c.classList.remove("active-tab");}
 event.currentTarget.classList.add("active-link");
 document.getElementById(tabname).classList.add("active-tab");
 }
-var sidemeu=document.getElementById("sidemenu");
-function openmenu(){sidemeu.style.right="0";}
-function closemenu(){sidemeu.style.right="-200px";}
 </script>
 
 </body>
