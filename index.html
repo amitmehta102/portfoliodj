@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personal Portfolio Website</title>
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 crossorigin="anonymous">
@@ -31,16 +30,19 @@ body{
     object-fit:cover;
 }
 
-.container{padding:10px 10%;}
+.container{
+    padding:10px 10%;
+}
 
-/* NAVBAR */
+/* NAV */
 nav{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
 }
-.logo{width:140px;}
-
+.logo{
+    width:140px;
+}
 nav ul li{
     display:inline-block;
     margin:10px 20px;
@@ -61,8 +63,11 @@ nav ul li a::after{
     bottom:-6px;
     transition:.5s;
 }
-nav ul li a:hover::after{width:100%;}
+nav ul li a:hover::after{
+    width:100%;
+}
 
+/* HEADER TEXT */
 .header-text{
     margin-top:20%;
     font-size:30px;
@@ -71,7 +76,9 @@ nav ul li a:hover::after{width:100%;}
     font-size:60px;
     margin-top:20px;
 }
-.header-text h1 span{color:#f97316;}
+.header-text h1 span{
+    color:#f97316;
+}
 
 /* ABOUT */
 #about{
@@ -83,12 +90,16 @@ nav ul li a:hover::after{width:100%;}
     justify-content:space-between;
     flex-wrap:wrap;
 }
-.about-col-1{flex-basis:35%;}
+.about-col-1{
+    flex-basis:35%;
+}
 .about-col-1 img{
     width:100%;
     border-radius:15px;
 }
-.about-col-2{flex-basis:60%;}
+.about-col-2{
+    flex-basis:60%;
+}
 .sub-title{
     font-size:60px;
     font-weight:600;
@@ -116,11 +127,15 @@ nav ul li a:hover::after{width:100%;}
     bottom:-8px;
     transition:.5s;
 }
-.tab-links.active-link::after{width:50%;}
-
-.tab-contents{display:none;}
-.tab-contents.active-tab{display:block;}
-
+.tab-links.active-link::after{
+    width:50%;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
 .tab-contents ul li{
     list-style:none;
     margin:10px 0;
@@ -131,7 +146,9 @@ nav ul li a:hover::after{width:100%;}
 }
 
 /* SERVICES */
-#services{padding:30px 0;}
+#services{
+    padding:30px 0;
+}
 .services-list{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -148,9 +165,19 @@ nav ul li a:hover::after{width:100%;}
     background:#ff004f;
     transform:translateY(-10px);
 }
+.services-list div i{
+    font-size:50px;
+    margin-bottom:30px;
+}
+.services-list div h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
 
 /* PORTFOLIO */
-#portfolio{padding:50px 0;}
+#portfolio{
+    padding:50px 0;
+}
 .work-list{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -176,9 +203,15 @@ nav ul li a:hover::after{width:100%;}
     justify-content:center;
     flex-direction:column;
     transition:.5s;
+    text-align:center;
+    padding:20px;
 }
-.work:hover img{transform:scale(1.1);}
-.work:hover .layer{height:100%;}
+.work:hover img{
+    transform:scale(1.1);
+}
+.work:hover .layer{
+    height:100%;
+}
 
 /* BUTTON */
 .btn{
@@ -192,7 +225,9 @@ nav ul li a:hover::after{width:100%;}
     text-decoration:none;
     transition:.5s;
 }
-.btn:hover{background:#ff004f;}
+.btn:hover{
+    background:#ff004f;
+}
 .btn.btn2{
     display:inline-block;
     background:#ff004f;
@@ -213,7 +248,6 @@ nav ul li a:hover::after{width:100%;}
     color:#ff004f;
     transform:translateY(-5px);
 }
-
 form input,form textarea{
     width:100%;
     background:#262626;
@@ -224,131 +258,176 @@ form input,form textarea{
     border-radius:6px;
 }
 
+/* FOOTER */
 .copyright{
     background:#262626;
     text-align:center;
     padding:25px;
     margin-top:20px;
 }
-#msg{color:#61b752;}
+#msg{
+    color:#61b752;
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div id="header">
-  <div class="container">
-    <nav>
-      <img src="images.png" class="logo">
-      <ul id="sidemenu">
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <i class="fas fa-times" onclick="closemenu()"></i>
-      </ul>
-      <i class="fas fa-bars" onclick="openmenu()"></i>
-    </nav>
+<div class="container">
+<nav>
+<img src="images.png" class="logo">
+<ul id="sidemenu">
+<li><a href="#header">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+<i class="fas fa-times" onclick="closemenu()"></i>
+</ul>
+<i class="fas fa-bars" onclick="openmenu()"></i>
+</nav>
 
-    <img src="go.jpeg" id="hey">
+<img src="go.jpeg" id="hey">
 
-    <div class="header-text">
-      <p>Software Engineer</p>
-      <h1>Hi, I'm <span>Dharmendra</span><br>Kumar From India</h1>
-    </div>
-  </div>
+<div class="header-text">
+<p>Software Engineer</p>
+<h1>Hi, I'm <span>Dharmendra</span><br>Kumar From India</h1>
+</div>
+</div>
 </div>
 
 <!-- ABOUT -->
 <div id="about">
-  <div class="container">
-    <div class="row">
-      <div class="about-col-1">
-        <img src="rock.jpeg">
-      </div>
-      <div class="about-col-2">
-        <h1 class="sub-title">About Me</h1>
-        <p>
-          Computer Science Engineering student frontend developer skilled in
-          HTML, CSS, JavaScript, and React. Passionate about building clean,
-          responsive web interfaces and continuously learning new technologies.
-        </p>
+<div class="container">
+<div class="row">
+<div class="about-col-1">
+<img src="rock.jpeg">
+</div>
+<div class="about-col-2">
+<h1 class="sub-title">About Me</h1>
+<p>
+Computer Science Engineering student frontend developer skilled in
+HTML, CSS, JavaScript, and React. Passionate about building clean,
+responsive web interfaces and continuously learning new technologies.
+</p>
 
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-links" onclick="opentab('experience')">Experience</p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-        </div>
+<div class="tab-titles">
+<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+<p class="tab-links" onclick="opentab('experience')">Experience</p>
+<p class="tab-links" onclick="opentab('education')">Education</p>
+</div>
 
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-            <li><span>Web Development</span><br>Web app Development</li>
-            <li><span>App Development</span><br>Android/iOS apps</li>
-          </ul>
-        </div>
+<div class="tab-contents active-tab" id="skills">
+<ul>
+<li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+<li><span>Web Development</span><br>Web app Development</li>
+<li><span>App Development</span><br>Android/iOS apps</li>
+</ul>
+</div>
 
-        <div class="tab-contents" id="experience">
-          <ul>
-            <li><span>2027-Current</span><br>UI/UX Training</li>
-            <li><span>2025-2026</span><br>Team Lead</li>
-            <li><span>2024-2025</span><br>UI Executive</li>
-          </ul>
-        </div>
+<div class="tab-contents" id="experience">
+<ul>
+<li><span>2027-Current</span><br>UI/UX Design Training</li>
+<li><span>2025-2026</span><br>Team Lead</li>
+<li><span>2024-2025</span><br>UI Executive</li>
+</ul>
+</div>
 
-        <div class="tab-contents" id="education">
-          <ul>
-            <li><span>B.Tech</span><br>Computer Science Engineering</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="tab-contents" id="education">
+<ul>
+<li><span>B.Tech</span><br>Computer Science Engineering</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- SERVICES -->
+<div id="services">
+<div class="container">
+<h1 class="sub-title">My Services</h1>
+<div class="services-list">
+<div>
+<i class="fas fa-code"></i>
+<h2>Web Design</h2>
+<p>Modern responsive websites</p>
+</div>
+<div>
+<i class="fas fa-crop-alt"></i>
+<h2>UI/UX Design</h2>
+<p>Clean user-focused design</p>
+</div>
+<div>
+<i class="fab fa-app-store"></i>
+<h2>App Design</h2>
+<p>Basic mobile app UI</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio">
+<div class="container">
+<h1 class="sub-title">My Work</h1>
+<div class="work-list">
+<div class="work">
+<img src="work-1.png">
+<div class="layer">
+<h3>Social Media App</h3>
+<p>Connects people worldwide</p>
+</div>
+</div>
+<div class="work">
+<img src="work-2.png">
+<div class="layer">
+<h3>Music App</h3>
+<p>Stream and enjoy music</p>
+</div>
+</div>
+<div class="work">
+<img src="work-3.png">
+<div class="layer">
+<h3>Shopping App</h3>
+<p>Online shopping experience</p>
+</div>
+</div>
+</div>
+<a href="#" class="btn">See more</a>
+</div>
 </div>
 
 <!-- CONTACT -->
 <div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p><i class="fas fa-paper-plane"></i> mehtadharmendrakumar23@gmail.com</p>
-        <p><i class="fas fa-phone-square-alt"></i> 9508937434</p>
+<div class="container">
+<div class="row">
+<div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fas fa-paper-plane"></i> mehtadharmendrakumar23@gmail.com</p>
+<p><i class="fas fa-phone-square-alt"></i> 9508937434</p>
 
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
 
-        <a href="Dharmendra_Kumar_Mehta_CV.pdf" download class="btn btn2">
-          Download Resume
-        </a>
-      </div>
-    </div>
-  </div>
+<a href="Dharmendra_Kumar_Mehta_CV.pdf" download class="btn btn2">
+Download Resume
+</a>
+</div>
+</div>
+</div>
 </div>
 
 <div class="copyright">
-  <p>© Dharmendra Kumar</p>
+<p>© Dharmendra Kumar</p>
 </div>
 
-<!-- JS -->
 <script>
 var tablinks=document.getElementsByClassName("tab-links");
-var tabcontents=document.getElementsByClassName("tab-contents");
-function opentab(tabname){
-  for(tablink of tablinks){tablink.classList.remove("active-link");}
-  for(tabcontent of tabcontents){tabcontent.classList.remove("active-tab");}
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
-}
-
-var sidemeu=document.getElementById("sidemenu");
-function openmenu(){sidemeu.style.right="0";}
-function closemenu(){sidemeu.style.right="-200px";}
-</script>
-
-</body>
-</html>
+var tabcontents=document.getElement
